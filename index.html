@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>CSE 134B Personal Portfolio</title>
+  <template>
+    <p>This is a placeholder template</p>
+  </template>
+  <style>
+      p {
+        font-size: 18px;
+      }
+  </style>
+  <script>
+    window.onload = function() {
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.fillRect(10, 10, 50, 50);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <p>
+      <span style="color:gray;">Howard Ma</span>
+    </p>
+    <picture>
+      <source srcset="small.jpg" media="(max-width: 800px)">
+      <img src="cse134blogo.png" alt="site logo, a sqaure with the letter h on the bottom" width="50">
+    </picture>
+    <nav>
+      <ul>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#playground">Playground</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h1>
+        <code>Hello. I'm Howard</code>.
+      </h1>
+      <p>
+        I'm a <em>Computer Science</em> student at <strong>the University of California, San Diego (UCSD)</strong>.
+      </p>
+      <form>
+        <fieldset>
+          <legend>Connect with me by telling me your favorite <b>fruit</b> and browser!</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <select>
+            <optgroup label="Fruits">
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+              <option value="grapes">Grapes</option>
+            </optgroup>
+          </select>
+          <br>
+          <label for="message">Message:</label>
+          <br>
+          <textarea id="message" name="message" rows="5" cols="30"></textarea>
+          <br>
+          <label for="browser">Browser:</label>
+          <input type="text" list="browsers" id="browser" name="browser">
+          <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Mozilla Firefox">
+            <option value="Safari">
+            <option value="Edge">
+          </datalist>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="resume">
+      <div>
+        <hr>
+        <h2>
+          Education
+        </h2>
+        <pre>
+          University of California, San Diego - Expected Grad Date: June 2024
+          B.S. in Computer Science
+        </pre>
+        <details>
+          <summary>Coursework</summary>
+          <ul>
+            <li>Software Engineering</li>
+            <li>Data Structures</li>
+            <li>Algorithms</li>
+          </ul>
+        </details>
+      </div>
+
+      <hr>
+      <h2>
+        Experiences
+      </h2>
+      <ul>
+        <li>Software Engineering Intern @ Slack</li>
+        <li>Software Engineering Intern @ Meta</li>
+      </ul>
+
+      <hr>
+      <h2>
+        Projects
+      </h2>
+      <ol>
+        <li>Song Quiz Alexa App</li>
+        <li>Car Guess Forum App</li>
+      </ol>     
+
+      <hr>
+    </section>
+  </main>
+
+  <br>
+  
+  <section id="playground">
+    <h2>
+      Playground for Fun Stuff
+    </h2>
+    <iframe width="1216" height="684" src="https://www.youtube.com/embed/hvL1339luv0" title="Never gonna Meow you up" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <audio controls>
+      <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <video width="320" height="240" controls>
+      <source src="video-sample-mp4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <aside>
+      <figure>
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+        <figcaption>Fun Canvas</figcaption>
+      </figure>
+    </aside>
+
+    <div>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="50" fill="gray" />
+      </svg>
+    </div>
+  </section>
+
+  <footer>
+      <h3>
+        <i>Contacts</i>
+      </h3>
+      <table>
+        <caption>Contact Websites</caption>
+        <colgroup>
+          <col span="1">
+          <col>
+        </colgroup>
+        <tr>
+          <th>Site Name</th>
+          <th>Links</th>
+        </tr>
+        <tr>
+          <td>LinkedIn</td>
+          <td>https://www.linkedin.com/in/howardma/</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>https://github.com/homa31</td>
+        </tr>
+      </table>
+  </footer>
+  
+</body>
+</html>
