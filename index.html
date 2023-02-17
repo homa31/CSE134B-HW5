@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <title>CSE 134B Personal Portfolio</title>
   <template>
     <p>This is a placeholder template</p>
@@ -32,12 +35,6 @@
       <source srcset="small.jpg" media="(max-width: 800px)">
       <img src="cse134blogo.png" alt="site logo, a sqaure with the letter h on the bottom" width="50">
     </picture>
-    <nav>
-      <ul>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#playground">Playground</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
@@ -48,51 +45,21 @@
       <p>
         I'm a <em>Computer Science</em> student at <strong>the University of California, San Diego (UCSD)</strong>.
       </p>
-      <form>
-        <fieldset>
-          <legend>Connect with me by telling me your favorite <b>fruit</b> and browser!</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-          <select>
-            <optgroup label="Fruits">
-              <option value="apple">Apple</option>
-              <option value="banana">Banana</option>
-              <option value="grapes">Grapes</option>
-            </optgroup>
-          </select>
-          <br>
-          <label for="message">Message:</label>
-          <br>
-          <textarea id="message" name="message" rows="5" cols="30"></textarea>
-          <br>
-          <label for="browser">Browser:</label>
-          <input type="text" list="browsers" id="browser" name="browser">
-          <datalist id="browsers">
-            <option value="Google Chrome">
-            <option value="Mozilla Firefox">
-            <option value="Safari">
-            <option value="Edge">
-          </datalist>
-          <button type="submit">Submit</button>
-        </fieldset>
-      </form>
     </section>
 
     <section id="resume">
-      <div>
+      <div id="education">
         <hr>
-        <h2>
+        <h2 id="resume-title">
           Education
         </h2>
-        <pre>
+        <pre id="school">
           University of California, San Diego - Expected Grad Date: June 2024
-          B.S. in Computer Science
+          <i>B.S. in Computer Science</i>
         </pre>
-        <details>
+        <details id="coursework">
           <summary>Coursework</summary>
-          <ul>
+          <ul id="coursework-list">
             <li>Software Engineering</li>
             <li>Data Structures</li>
             <li>Algorithms</li>
@@ -101,82 +68,66 @@
       </div>
 
       <hr>
-      <h2>
+      <h2 id="resume-title">
         Experiences
       </h2>
       <ul>
-        <li>Software Engineering Intern @ Slack</li>
         <li>Software Engineering Intern @ Meta</li>
+        <li>Software Engineering Intern @ Slack</li>
       </ul>
 
       <hr>
-      <h2>
+      <h2 id="resume-title">
         Projects
       </h2>
-      <ol>
+      <ul>
         <li>Song Quiz Alexa App</li>
         <li>Car Guess Forum App</li>
-      </ol>     
+      </ul>     
 
       <hr>
     </section>
   </main>
 
   <br>
-  
-  <section id="playground">
-    <h2>
-      Playground for Fun Stuff
-    </h2>
-    <iframe width="1216" height="684" src="https://www.youtube.com/embed/hvL1339luv0" title="Never gonna Meow you up" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <audio controls>
-      <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <video width="320" height="240" controls>
-      <source src="video-sample-mp4.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
-    <aside>
-      <figure>
-        <canvas id="myCanvas" width="500" height="500"></canvas>
-        <figcaption>Fun Canvas</figcaption>
-      </figure>
-    </aside>
-
-    <div>
-      <svg width="100" height="100">
-        <circle cx="50" cy="50" r="50" fill="gray" />
-      </svg>
-    </div>
-  </section>
+  <form>
+    <fieldset>
+      <legend>Connect with me by telling me your favorite <b>fruit</b> and browser!</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <select>
+        <optgroup label="Fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="grapes">Grapes</option>
+        </optgroup>
+      </select>
+      <br>
+      <label for="message">Message:</label>
+      <br>
+      <textarea id="message" name="message" rows="5" cols="30"></textarea>
+      <br>
+      <label for="browser">Browser:</label>
+      <input type="text" list="browsers" id="browser" name="browser">
+      <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Safari">
+        <option value="Edge">
+      </datalist>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
 
   <footer>
-      <h3>
-        <i>Contacts</i>
-      </h3>
-      <table>
-        <caption>Contact Websites</caption>
-        <colgroup>
-          <col span="1">
-          <col>
-        </colgroup>
-        <tr>
-          <th>Site Name</th>
-          <th>Links</th>
-        </tr>
-        <tr>
-          <td>LinkedIn</td>
-          <td>https://www.linkedin.com/in/howardma/</td>
-        </tr>
-        <tr>
-          <td>GitHub</td>
-          <td>https://github.com/homa31</td>
-        </tr>
-      </table>
+    <section id="contacts">
+      <h3 id="contact-title">Contacts</h3>
+      <a href="https://www.linkedin.com/in/howardma/">LinkedIn</a>
+      <a href="https://github.com/homa31">GitHub</a>
+    </section>
   </footer>
   
 </body>

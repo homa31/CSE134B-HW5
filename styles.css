@@ -1,0 +1,85 @@
+* {
+  font-family: 'Inter', sans-serif;
+  color: #323232;
+}
+
+main {
+  width: 95vw;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+header, footer {
+  width: 100%;
+  background-color: #DDD0C8;
+}
+
+h1 {
+  transform: rotate(2deg);
+}
+
+h2 {
+  font-size: 200%;
+}
+
+a {
+  transition: background-color 0.5s ease;
+}
+
+a:hover {
+  background-color: lightcyan;
+}
+
+@keyframes myAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+h1 {
+  animation: myAnimation 2s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 601px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+#resume-title {
+  margin-top: 0px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contacts {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+#coursework {
+  margin-top: 0rem;
+  margin-left: 2rem;
+}
+
+#school {
+  margin: 0;
+  padding: 0;
+}
+
+#contact-title {
+  margin-bottom: 0.5rem;
+}
