@@ -12,23 +12,27 @@
 </head>
 <body>
   <header>
-    <p>
-      <span style="color:gray;">Howard Ma</span>
-    </p>
-    <picture>
-      <source srcset="small.jpg" media="(max-width: 800px)">
-      <img src="cse134blogo.png" alt="site logo, a sqaure with the letter h on the bottom" width="50">
-    </picture>
+    <h1>
+      <p id="header-text">Hi. I'm Howard <span class="emoticon" alt="bear waving emoticon">ʕ•́ᴥ•̀ʔっ</span></p>
+    </h1>
   </header>
 
   <main>
     <section id="about">
-      <h1>
-        <code>Hello. I'm Howard <span class="emoticon" alt="bear waving emoticon">ʕ•́ᴥ•̀ʔっ</span></code>
-      </h1>
-      <p>
-        I'm a <em>Computer Science</em> student at <strong>the University of California, San Diego (UCSD)</strong>.
+      <p id="intro-text">
+        Greetings! I'm a <em>Computer Science</em> student at <strong>the University of California, San Diego (UCSD)</strong>🔱.
+        <br><br>
+        I was an SWE intern at Meta in Fall 2022 in NYC on the Instragram Lite team! 🗽 and interned at Slack in the summer and thoroughly enjoyed my time on the MoCap team and in SF. 🌉
+        <br><br>
+        I was able to hear from amazing speakers and connect with other fellows as a part of the Bessemer Fellowship Program, memorable experience!
+        <br><br>
+        In the past, I was an iOS/Android Tech Fellow at CodePath.org teaching UC San Diego student mobile dev in iOS/Android. I also was an SWE intern at nCino and ConsumerTrack.
+        <br><br>
+        I enjoy learning cool things! I have fiddled with Alexa and found Voice-Controlled software interesting after building Alexa skills. I also got into magic/cardistry and recently started boxing.
+        <br><br>
+        I love to meet new people so don't hesitate to reach out to me to chat!
       </p>
+      <img src="portrait.JPG" alt="Howard Selfie" id="portrait">
     </section>
 
     <section id="resume">
@@ -37,10 +41,11 @@
         <h2 id="resume-title">
           Education <span class="emoticon" alt="big eyes face writing emoticon">✍(◔◡◔)</span>
         </h2>
-        <pre id="school">
+        <p id="school">
           University of California, San Diego - Expected Grad Date: June 2024
+          <br>
           <i>B.S. in Computer Science</i>
-        </pre>
+        </p>
         <details id="coursework">
           <summary>Coursework</summary>
           <ul id="coursework-list">
@@ -74,7 +79,6 @@
   </main>
 
   <br>
-
   <form>
     <fieldset>
       <legend>Connect With Me <span class="emoticon" alt="face with eyes to the side and grinning emoticon">(¬‿¬)</span></legend>
