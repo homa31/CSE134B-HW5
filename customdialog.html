@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.2/dist/purify.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <button id="alert-btn">Alert</button>
+  <button id="confirm-btn">Confirm</button>
+  <button id="prompt-btn">Prompt</button>
+  <br>
+  <output id="confirm-output"></output>
+  <dialog id="alert-dialog">
+    <h2>Alert pressed!</h2>
+    <button id="close-alert-dialog-button">Ok</button>
+  </dialog>
+  <dialog id="confirm-dialog">
+    <h2>Do you confirm this?</h2>
+    <button id="cancel-confirm-dialog-button">Cancel</button>
+  </dialog>
+  <dialog id="prompt-dialog">
+    <h2>What is your name?</h2>
+    <input id="prompt-dialog-input">
+    <button id="confirm-prompt-dialog-button">Cancel</button>
+    <button id="confirm-prompt-dialog-button">Ok</button>
+  </dialog>
+  <script type="module" src="customdialog.js"></script>
+</body>
+</html>
