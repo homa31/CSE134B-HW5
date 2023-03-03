@@ -89,3 +89,75 @@ function loadPosts() {
 addButtonEl.addEventListener('click', addPost);
 
 loadPosts();
+
+const postDialogEl = document.querySelector('#post-dialog');
+const postFormEl = postDialogEl.querySelector('form');
+const titleInputEl = postFormEl.querySelector('#title-input');
+const dateInputEl = postFormEl.querySelector('#date-input');
+const summaryInputEl = postFormEl.querySelector('#summary-input');
+const cancelButtonEl = postFormEl.querySelector('#cancel-button');
+
+function addPost() {
+  // Open the dialog
+  postDialogEl.showModal();
+
+  // Clear the input fields
+  titleInputEl.value = '';
+  dateInputEl.value = '';
+  summaryInputEl.value = '';
+
+  // Handle form submission
+  postFormEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const title = titleInputEl.value;
+    const date = dateInputEl.value;
+    const summary = summaryInputEl.value;
+
+    if (title && date && summary) {
+      const post = { title, date, summary };
+      posts.push(post);
+      renderPosts();
+      savePosts();
+      postDialogEl.close();
+    }
+  });
+
+  // Handle cancel button click
+  cancelButtonEl.addEventListener('click', () => {
+    postDialogEl.close();
+  });
+}
+
+function editPost(index) {
+  const post = posts[index];
+
+  // Open the dialog
+  postDialogEl.showModal();
+
+  // Set the input field values
+  titleInputEl.value = post.title;
+  dateInputEl.value = post.date;
+  summaryInputEl.value = post.summary;
+
+  // Handle form submission
+  postFormEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const title = titleInputEl.value;
+    const date = dateInputEl.value;
+    const summary = summaryInputEl.value;
+
+    if (title && date && summary) {
+      posts[index] = { title, date, summary };
+      renderPosts();
+      savePosts();
+      postDialogEl.close();
+    }
+  });
+
+  // Handle cancel button click
+  cancelButtonEl.addEventListener('click', () => {
+    postDialogEl.close();
+  });
+}

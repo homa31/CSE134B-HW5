@@ -21,7 +21,23 @@
     </tbody>
   </table>
 
-  <button id="add-button">Add Post</button>
+  <dialog id="post-dialog">
+    <form>
+     <label for="title-input">Title:</label>
+     <input type="text" id="title-input">
+    
+     <label for="date-input">Date:</label>
+     <input type="date" id="date-input">
+    
+     <label for="summary-input">Summary:</label>
+     <input type="text" id="summary-input">
+    
+     <button type="submit">Save</button>
+     <button type="button" id="cancel-button">Cancel</button>
+   </form>
+ </dialog>
+
+  <button id="add-button" onclick="addPost()">Add Post</button>
   <script src="blog.js"></script>
 </body>
 </html>
